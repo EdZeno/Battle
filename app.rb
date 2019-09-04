@@ -24,5 +24,9 @@ enable :sessions
     erb :play
   end
 
+  get '/game' do
+    'player_2_hit_points'
+  end
+
   run! if app_file == $0
 end
