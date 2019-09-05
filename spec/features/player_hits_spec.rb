@@ -3,10 +3,7 @@
 # I want to see Player 2's Hit Points
 feature 'Viewing opponents Hit points' do
   scenario 'When playing I should see my opponents hit points on the game screen' do
-    visit('/sign_in')
-    fill_in('name_player1', with: 'Boris')
-    fill_in('name_player2', with: 'James')
-    click_on('Submit')
-    expect(page).to have_content('James: 60HP')
+    sign_in_and_play
+    expect(page).to have_content('James: 60H')
   end
 end

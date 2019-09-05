@@ -1,9 +1,6 @@
 feature 'sign in' do
   scenario 'players input names and submit a form' do
-    visit('/sign_in')
-    fill_in('name_player1', with: 'Boris')
-    fill_in('name_player2', with: 'James')
-    click_on('Submit')
+    sign_in_and_play
     expect(page).to have_content('Boris vs James')
   end
 end
