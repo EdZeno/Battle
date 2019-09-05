@@ -7,7 +7,6 @@ feature 'Viewing opponents Hit points' do
     fill_in('name_player1', with: 'Boris')
     fill_in('name_player2', with: 'James')
     click_on('Submit')
-    click_on('start_game')
-    expect(page).to have_content('player_2_hit_points')
+    expect(page).to have_content('James: 60HP')
   end
 end

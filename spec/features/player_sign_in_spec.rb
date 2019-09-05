@@ -4,6 +4,6 @@ feature 'sign in' do
     fill_in('name_player1', with: 'Boris')
     fill_in('name_player2', with: 'James')
     click_on('Submit')
-    expect(page).to have_content('Welcome Boris and James')
+    expect(page).to have_content('Boris vs James')
   end
 end
